@@ -10,5 +10,5 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME']
 
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['beta', 'run', 'deploy', '$REPO_NAME', '--image=gcr.io/$PROJECT_ID/$REPO_NAME', '--platform=managed', '--region=us-central1', '--allow-unauthenticated']
+    args: ['beta', 'run', 'deploy', '$REPO_NAME', '--image=gcr.io/$PROJECT_ID/$REPO_NAME', '--platform=managed', '--region=us-central1', '--memory=512M', '--allow-unauthenticated']
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME']
