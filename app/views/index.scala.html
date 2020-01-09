@@ -9,7 +9,7 @@
     </style>
     <script>
         if (!!window.EventSource) {
-            const stringSource = new EventSource("@routes.Application.questions()");
+            const stringSource = new EventSource('@routes.Application.questions()');
             stringSource.onopen = () => { document.getElementById('status').innerText = 'Most Popular StackOverflow Questions' };
             stringSource.onmessage = (message) => {
                 const data = JSON.parse(message.data);
@@ -26,7 +26,10 @@
                 document.getElementById('questions').appendChild(question);
             };
 
-            stringSource.onerror = (error) => { document.getElementById('status').innerText = 'Query error: ' + error.data };
+            stringSource.onerror = (error) => {
+              console.log(error);
+              document.getElementById('status').innerText = 'Query error: ' + error;
+            };
         }
         else {
             // todo

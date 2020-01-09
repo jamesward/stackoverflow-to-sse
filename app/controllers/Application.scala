@@ -7,9 +7,8 @@ import play.api.Logging
 import play.api.http.ContentTypes
 import play.api.libs.EventSource
 import play.api.libs.json._
-import play.api.mvc.{InjectedController, WebSocket}
+import play.api.mvc.InjectedController
 
-import scala.concurrent.Future
 import scala.concurrent.duration._
 import scala.jdk.CollectionConverters._
 import scala.util.Try
