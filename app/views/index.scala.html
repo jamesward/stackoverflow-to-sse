@@ -26,10 +26,10 @@
                 document.getElementById('questions').appendChild(question);
             };
 
-            stringSource.onerror = (error) => { document.getElementById('status').innerText = 'Query error: ' + error };
+            stringSource.onerror = (error) => { document.getElementById('status').innerText = 'Query error: ' + error.data };
         }
         else {
-
+            // todo
         }
     </script>
 </head>
